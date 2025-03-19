@@ -1,0 +1,10 @@
+  1st- add two depencies 
+  .spring core and spring context in pom.xml
+  
+  2step- create an entity and aap .java file
+  
+  
+  3rd step create an xml file in resourse.
+  
+  
+  4th step - add spring bean xsd file in applicationcontext.xml 

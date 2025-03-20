@@ -6,13 +6,26 @@
 
     <!-- bean definitions here -->
 
+  <!-- bean of address -->
+<bean name ="add" class="com.springcore.model.Address">
+<property name="city"  value="ghaazaiabad" />
+
+<property name="state"  value="UP" />
+
+</bean>
+
+  <!-- bean of employee -->
 <bean name ="emp" class="com.springcore.model.Employee">
 <property name="id"  value="111" />
 
 <property name="name"  value="Guest" />
 <property name="gender"  value="Male" />
+<property name="address"  ref="add" />
 </bean>
 
+
+
+ <!-- bean of employee injection throughth constructor 
 <bean name="emp2" class="com.springcore.model.Employee">
 
 <constructor-arg name="id" value="123" />
@@ -21,5 +34,5 @@
 <constructor-arg name="gender"  value="Male" />
 
 </bean>
-
+-->
 </beans>

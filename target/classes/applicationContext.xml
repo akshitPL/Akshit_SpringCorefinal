@@ -5,56 +5,14 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    
-    <bean name="add" class="com.springcore.model.Address">
-    <property name="city"  value="ghaziabad" />
-
-<property name="state"  value="up" />
-    
-    </bean>
-		
 
 <bean name ="emp" class="com.springcore.model.Employee">
 <property name="id"  value="111" />
 
 <property name="name"  value="Guest" />
 <property name="gender"  value="Male" />
-<property name="address"  ref="add" />
-
-<property name="list">
-<list>
-<value>20</value>
-<value>10</value>
-</list>
-
-
-</property>
-
-<property name="set">
-<set>
-<value>20</value>
-<value>10</value>
-</set>
-
-
-</property>
-
-<property name="map">
-<map>
-<entry key="1" value="one"/>
-<entry key="2" value="two"/>
-</map>
-
-
-</property>
-
 </bean>
 
-
-
-
-
- <!--
 <bean name="emp2" class="com.springcore.model.Employee">
 
 <constructor-arg name="id" value="123" />
@@ -63,5 +21,5 @@
 <constructor-arg name="gender"  value="Male" />
 
 </bean>
--->
+
 </beans>

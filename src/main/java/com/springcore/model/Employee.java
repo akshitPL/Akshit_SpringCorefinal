@@ -1,14 +1,14 @@
 package com.springcore.model;
 
 
-public class Employee {
+ abstract public class Employee {
 
 	private int id;
 	private String name, gender;
 	
-	
-	private Address address;
 
+	private Address address;
+	public  abstract  Address byapply();
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -62,11 +62,11 @@ public class Employee {
 	}
 
 
+	
+
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
-
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";

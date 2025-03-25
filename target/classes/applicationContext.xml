@@ -6,19 +6,20 @@
 
     <!-- bean definitions here -->
     
-    <bean name="address" class="com.springcore.model.Address">
-    <constructor-arg name="city"  value="ghaziabad" />
+    <bean name="address" class="com.springcore.model.Address" scope="prototype">
+    <property name="city"  value="ghaziabad" />
 
-<constructor-arg name="state"  value="up" />
+<property name="state"  value="up" />
     
     </bean>
 		
 
-<bean name ="emp" class="com.springcore.model.Employee" autowire="constructor">
-<constructor-arg name="id"  value="111" />
+<bean name ="emp" class="com.springcore.model.Employee">
+<property name="id"  value="111" />
 
-<constructor-arg name="name"  value="Guest" />
-<constructor-arg name="gender"  value="Male" />
+<property name="name"  value="Guest" />
+<property  name="gender"  value="Male" />
+<lookup-method name="byapply" bean="address"/>
 
 
 </bean>

@@ -13,8 +13,8 @@ ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.
   
 Employee bean= ioc.getBean("emp",Employee.class);
       System.out.println(bean);
-      
-       
+     // System.out.println(bean.getGender());
+      //System.out.println(bean.getName());
 		
 //       // bean thro constructor
 //      Employee bean2 = ioc.getBean("emp2",Employee.class);

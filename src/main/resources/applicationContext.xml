@@ -14,7 +14,14 @@
     </bean>
 		
 
-<bean name ="emp" class="com.springcore.model.Employee"   scope="prototype">
+ <bean name="p1" class="com.springcore.model.person" abstract="true">
+    <property name="n"  value="Akshit" />
+
+<property name="g"  value="male" />
+    
+    </bean>
+
+<bean name ="emp" class="com.springcore.model.Employee" parent="p1"  >
 <property name="id"  value="111" />
 
 <property name="name"  value="Guest" />

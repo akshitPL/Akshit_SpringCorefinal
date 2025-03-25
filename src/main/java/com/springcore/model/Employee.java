@@ -1,7 +1,7 @@
 package com.springcore.model;
 
 
-public class Employee {
+public class Employee extends person {
 
 	private int id;
 	private String name, gender;
@@ -11,12 +11,7 @@ public class Employee {
 
 	public Employee() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
-	
-	 
-
 
 	public Employee(int id, String name, String gender, Address address) {
 		super();
@@ -25,6 +20,15 @@ public class Employee {
 		this.gender = gender;
 		this.address = address;
 	}
+
+
+
+
+
+
+
+
+
 
 
 	public int getId() {
@@ -67,10 +71,41 @@ public class Employee {
 	}
 
 
+
+
+
+
+
+
+
+
+
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + getN()+" "+getG() +"]";
 	}
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+	
+
+	
 
 
 	

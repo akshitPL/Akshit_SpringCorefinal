@@ -67,10 +67,10 @@ public class Employee {
 	}
 
 
-//	@Override
-//	public String toString() {
-//		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
-//	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
+	}
 
 
 	

@@ -6,7 +6,7 @@
 
     <!-- bean definitions here -->
     
-    <bean name="address" class="com.springcore.model.Address">
+    <bean name="add" class="com.springcore.model.Address">
     <property name="city"  value="ghaziabad" />
 
 <property name="state"  value="up" />
@@ -14,12 +14,24 @@
     </bean>
 		
 
-<bean name ="emp" class="com.springcore.model.Employee" autowire="byName"  scope="prototype">
+<bean name ="emp" class="com.springcore.model.Employee"   scope="prototype">
 <property name="id"  value="111" />
 
 <property name="name"  value="Guest" />
 <property name="gender"  value="Male" />
+<property name="address">
 
+ <bean class="com.springcore.model.Address">
+    <property name="city"  value="ghaziabad" />
+
+<property name="state"  value="up" />
+    
+    </bean>
+
+
+
+
+</property>
 
 </bean>
 

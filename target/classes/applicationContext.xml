@@ -4,7 +4,7 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
+    <!-- bean definitions here 
     
     <bean name="address" class="com.springcore.model.Address" scope="prototype">
     <property name="city"  value="ghaziabad" />
@@ -12,7 +12,20 @@
 <property name="state"  value="up" />
     
     </bean>
+		-->
+		<bean id="ds"
+		class="org.springFramework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc.mysql://localhost:3306/sameer"/>
+		<property name="username" value="root"/>
+		<property name="password" value="akshit@123"/>
+		</bean>
 		
+		<bean id="jdbcTemplate" 
+		class="org.springFramework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"></property>
+</bean>
+
 
 <bean name ="emp" class="com.springcore.model.Employee">
 <property name="id"  value="111" />

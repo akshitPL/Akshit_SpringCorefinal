@@ -5,6 +5,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.springcore.model.Address;
 import com.springcore.model.Employee;
+ 
+import dp.com.EmployeeDao;
+
+
 
 public class Client {
 
@@ -12,13 +16,9 @@ public class Client {
 		
 ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
   
-Employee bean= ioc.getBean("emp",Employee.class);
-     
-      bean.setAddress(bean.byapply());
-      System.out.println(bean);
-Address a1 = bean.byapply();
-a1.setCity("noida");
-System.out.println(a1);
+     EmployeeDao bean= ioc.getBean("EmployeeDao", EmployeeDao.class);
+	     Employee emp1 = new Employee (1, "arvind", "male", 45225);
+	    bean.saveEmployee(emp1);
 //       // bean thro constructor
 //      Employee bean2 = ioc.getBean("emp2",Employee.class);
 //      System.out.println(bean2);

@@ -1,4 +1,6 @@
 package dp.com;
+import com.springcore.model.EmployeeMapper;
+import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.springcore.model.Employee;
@@ -29,4 +31,9 @@ public class EmployeeDao {
         String query = "DELETE FROM employee WHERE id = ?";
         return jdbcTemplate.update(query, id);
     }
+
+	public List<Employee> getAllEmp() {
+		// TODO Auto-generated method stub
+		return jdbcTemplate.query("select* from employee", new EmployeeMapper() );
+	}
 }

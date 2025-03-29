@@ -1,4 +1,4 @@
-package com.springcore.model;
+ package com.springcore.model;
 
 public class Employee {
     private int id;

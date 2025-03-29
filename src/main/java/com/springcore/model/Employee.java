@@ -1,13 +1,17 @@
  package com.springcore.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component 
 public class Employee {
     private int id;
     private String name;
     private String gender;
     private int salary; // ✅ Ensure this exists
 
-    
-    
+    @Autowired 
+    private Address address;
     
   public Employee() {
 		super();
@@ -15,12 +19,18 @@ public class Employee {
 	}
 
 
-public Employee(int id, String name, String gender, int salary) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.salary = salary;
-    }
+
+
+	public Employee(int id, String name, String gender, int salary, Address address) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.gender = gender;
+	this.salary = salary;
+	this.address = address;
+}
+
+
 
 
 	// Getters and Setters
@@ -34,8 +44,28 @@ public Employee(int id, String name, String gender, int salary) {
     public void setGender(String gender) { this.gender = gender; }
     public void setSalary(int salary) { this.salary = salary; }
 
-    @Override
-    public String toString() {
-        return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + "]";
-    }
+    public Address getAddress() {
+		return address;
+	}
+
+
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + ", address="
+				+ address + "]";
+	}
+
+
+
+
+	
 }
